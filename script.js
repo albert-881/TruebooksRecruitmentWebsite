@@ -1,15 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Scroll effect for header
-    window.addEventListener("scroll", () => {
-        const header = document.querySelector(".header");
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    });
-
-    // Word-changing effect
     const words = document.querySelectorAll('.word');
     let currentIndex = 0;
 
@@ -17,9 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     words.forEach((word, index) => {
         if (index !== 0) {
             word.style.opacity = 0;
+        } else {
+            word.style.opacity = 1;
         }
     });
 
+    // Function to change the word
     function changeWord() {
         // Fade out the current word
         words[currentIndex].style.opacity = 0;
@@ -31,6 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         words[currentIndex].style.opacity = 1;
     }
 
-    // Change word every second (adjustable)
+    // Change word every second
     setInterval(changeWord, 1000);
 });
