@@ -1,28 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const words = document.querySelectorAll('.word');
-    let currentIndex = 0;
+    const words = document.querySelectorAll("#company-description .word");
+    let index = 0;
 
-    // Initialize all words to be invisible except the first one
-    words.forEach((word, index) => {
-        if (index !== 0) {
-            word.style.opacity = 0;
-        } else {
-            word.style.opacity = 1;
-        }
-    });
-
-    // Function to change the word
+    // Word Changing Effect
     function changeWord() {
-        // Fade out the current word
-        words[currentIndex].style.opacity = 0;
-
-        // Move to the next word, and wrap around to the first if we reach the last word
-        currentIndex = (currentIndex + 1);
-
-        // Fade in the next word
-        words[currentIndex].style.opacity = 1;
+        // Remove active class from all words
+        words.forEach(word => word.classList.remove("active"));
+        
+        // Add active class to the current word
+        words[index].classList.add("active");
+        
+        // Move to the next word (loop back to the first word)
+        index = (index + 1);
     }
 
-    // Change word every second
-    setInterval(changeWord, 1000);
+    setInterval(changeWord, 1500);
+
+    // Typing Effect for Tagline
+    const phrases = ["Modern Solutions for Your Business Needs", "Helping You Grow", "Reliable & Efficient Services"];
+    let i = 0, j = 0, currentPhrase = [], isDeleting = false;
+
+    function typeEffect() {
+        if (!isDeleting && j < phrases[i].length) {
+            currentPhrase.push(phrases[i][j++]);
+        } else if (isDeleting && j >= 0) {
+            currentPhrase.pop();
+            j--;
+        }
+        document.getElementById("typing-effect").textContent = currentPhrase.join("");
+        if (!isDeleting && j === phrases[i].length) isDeleting = true;
+        else if (isDeleting && j === 0) isDeleting = false, i = (i + 1) % phrases.length;
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+    }
+
+    typeEffect();
 });

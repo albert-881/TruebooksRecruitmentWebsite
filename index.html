@@ -3,84 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>True Book Partners</title>
+    <title>TrueBooks Partners</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">TrueBooks Partners</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">TrueBooks Partners</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Hero Section with Word Changing -->
-    <section class="hero d-flex align-items-center justify-content-center text-center text-white" style="height: 100vh;">
-        <div class="container">
-            <h1 class="display-3">Transforming Businesses</h1>
-            <p class="lead">Modern Solutions for Your Business Needs</p>
-            <div id="company-description">
-                <div class="d-flex justify-content-center">
-                    <span class="word">Innovative</span>
-                    <span class="word ms-3">Reliable</span>
-                    <span class="word ms-3">Efficient</span>
-                    <span class="word ms-3">Trusted</span>
-                </div>
-            </div>
-            <a href="#services" class="btn btn-light btn-lg mt-4">Learn More</a>
+
+ <!-- Hero Section -->
+<section class="hero d-flex align-items-center justify-content-center min-vh-100 bg-image">
+    <div class="text-center text-white p-4">
+        <h1 class="display-4 fw-bold hero-heading">Transforming Businesses</h1>
+        <p class="lead hero-text">Modern Solutions for Your Business Needs</p>
+        
+        <!-- Dynamic Word Changing Effect -->
+        <div id="company-description" class="my-4">
+            <span class="word">Innovative</span>
+            <span class="word">Reliable</span>
+            <span class="word">Efficient</span>
+            <span class="word">Trusted</span>
         </div>
-    </section>
+
+        <!-- Call-to-Action Buttons -->
+        <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary btn-lg mx-2">Explore Services</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg mx-2">Contact Us</a>
+        </div>
+    </div>
+</section>
+
 
     <!-- Services Section -->
-    <section id="services" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2 class="display-4">Our Services</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="service-box p-4 mb-4 shadow">
-                        <h3>Bookkeeping</h3>
-                        <p>Accurate and reliable bookkeeping for businesses of all sizes.</p>
-                    </div>
+   <!-- Services Section -->
+<section id="services" class="py-5">
+    <div class="container text-center">
+        <h2 class="display-4">Our Services</h2>
+        <div class="row mt-4">
+            <!-- Bookkeeping -->
+            <div class="col-md-4">
+                <div class="service-box">
+                    <i class="bi bi-book-half display-4 text-primary"></i>
+                    <h3>Bookkeeping</h3>
+                    <p>Accurate and reliable bookkeeping for businesses of all sizes.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="service-box p-4 mb-4 shadow">
-                        <h3>IT Support</h3>
-                        <p>Efficient IT solutions to keep your business running smoothly.</p>
-                    </div>
+            </div>
+
+            <!-- Software Development -->
+            <div class="col-md-4">
+                <div class="service-box">
+                    <i class="bi bi-laptop display-4 text-primary"></i>
+                    <h3>Software Development</h3>
+                    <p>Custom software solutions designed to optimize your business operations.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="service-box p-4 mb-4 shadow">
-                        <h3>Consulting</h3>
-                        <p>Expert consulting to guide your business toward success.</p>
-                    </div>
+            </div>
+
+            <!-- Staffing -->
+            <div class="col-md-4">
+                <div class="service-box">
+                    <i class="bi bi-person-lines-fill display-4 text-primary"></i>
+                    <h3>Staffing</h3>
+                    <p>Providing skilled and reliable staff to meet your business needs.</p>
+                </div>
+            </div>
+
+            <!-- Business Consulting -->
+            <div class="col-md-4">
+                <div class="service-box">
+                    <i class="bi bi-graph-up-arrow display-4 text-primary"></i>
+                    <h3>Business Consulting</h3>
+                    <p>Expert consulting to guide your business toward success and growth.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Footer Section -->
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2025 True Book Partners | All Rights Reserved</p>
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 TrueBooks Partners | All Rights Reserved</p>
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS for Word Changing Effect -->
     <script src="script.js"></script>
 </body>
 </html>
