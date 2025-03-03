@@ -119,7 +119,6 @@ body {
         background-position: 0% 50%;
     }
 }
-
 /* Hero Heading */
 .hero-heading {
     font-size: 5rem;
@@ -144,20 +143,25 @@ body {
     height: 50px;
     overflow: hidden;
     margin-bottom: 30px;
+    display: flex;            /* Added to center words horizontally */
+    justify-content: center;  /* Ensures the words are centered horizontally */
+    align-items: center;      /* Ensures the words are centered vertically */
+    position: relative;       /* Necessary to maintain proper stacking context for absolute positioning of words */
 }
 
 .word {
-    display: block;
     opacity: 0;
-    position: absolute;
+    position: absolute;       /* Keeps the words stacked but still centered */
     width: 100%;
     transition: opacity 0.8s ease-in-out;
     text-align: center;
+    font-size: 2.2rem;         /* Maintain font size for consistency */
 }
 
 .word.active {
     opacity: 1;
 }
+
 
 /* Hero Buttons */
 .hero-buttons {
